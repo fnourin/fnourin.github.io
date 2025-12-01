@@ -6,15 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
         content="Portfolio of Fatema Tuz Johra Nourin – GIS technician, graduate teaching assistant, and spatial data science researcher.">
+
+  <!-- Google Fonts: serif for name, sans for text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
   <style>
     :root {
-      --bg: #f6f6f7;
-      --text: #111111;
-      --muted: #555555;
-      --accent: #0b5fff;
-      --border: #dddddd;
-      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --max-width: 820px;
+      --bg: #ffffff;
+      --text-main: #111111;
+      --text-muted: #555555;
+      --button-bg: #111111;
+      --button-text: #ffffff;
+      --link: #0057ff;
+      --font-serif: "Playfair Display", "Times New Roman", serif;
+      --font-sans: "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     * {
@@ -24,350 +33,235 @@
     html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
     }
 
     body {
-      font-family: var(--font);
       background: var(--bg);
-      color: var(--text);
+      color: var(--text-main);
+      font-family: var(--font-sans);
       -webkit-font-smoothing: antialiased;
     }
 
-    .page {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      padding: 32px 16px 40px;
-    }
-
-    .wrapper {
-      width: 100%;
-      max-width: var(--max-width);
-      background: #ffffff;
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      padding: 24px 18px 28px;
-    }
-
-    @media (min-width: 768px) {
-      .wrapper {
-        padding: 32px 40px 40px;
-      }
-    }
-
-    /* Top intro */
-    header {
-      text-align: left;
-      margin-bottom: 28px;
-    }
-
-    .name {
-      font-size: clamp(2.0rem, 4vw, 2.6rem);
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    .subtitle {
-      font-size: 1rem;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-
-    .degree-line {
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .degree-line + .degree-line {
-      margin-top: 2px;
-    }
-
-    /* Simple nav like the reference site */
-    nav {
-      margin-top: 18px;
-      margin-bottom: 10px;
-      border-top: 1px solid var(--border);
-      padding-top: 12px;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 0.9rem;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--accent);
-    }
-
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* Body sections */
-    main {
-      border-top: 1px solid var(--border);
-      padding-top: 20px;
-    }
-
-    section {
-      margin-bottom: 28px;
-    }
-
-    section:last-of-type {
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 1.05rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      margin: 0 0 10px;
-      color: var(--muted);
-    }
-
-    .section-content {
-      font-size: 0.98rem;
-      line-height: 1.6;
-      color: var(--muted);
-    }
-
-    .item {
-      margin-bottom: 14px;
-    }
-
-    .item-title {
-      font-weight: 600;
-      margin-bottom: 2px;
-      color: var(--text);
-    }
-
-    .item-meta {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    ul {
-      margin: 4px 0 0 18px;
-      padding: 0;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    li + li {
-      margin-top: 3px;
-    }
-
-    /* Contact/social list */
-    .contact-list, .contact-list ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .contact-list li {
-      margin-bottom: 4px;
-      font-size: 0.95rem;
-    }
-
     a {
-      color: var(--accent);
+      color: var(--link);
+      text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 12px;
-      margin-top: 12px;
-      font-size: 0.8rem;
-      color: var(--muted);
+    .split {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* LEFT SIDE: portrait image */
+
+    .left {
+      flex: 1;
+      min-height: 50vh;
+      background-image: url("portrait.jpg"); /* <-- put your image file here */
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    /* RIGHT SIDE: text + buttons */
+
+    .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .inner {
+      width: 100%;
+      max-width: 520px;
+      text-align: center;
+    }
+
+    /* Initials / logo (simple text version) */
+    .initials {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+
+    /* Name + academic info */
+
+    .name {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .tagline {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .degrees {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: 26px;
+    }
+
+    /* Button grid like the example */
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 22px;
+      justify-items: center;
+      margin-bottom: 26px;
+    }
+
+    .button-grid .full {
+      grid-column: 1 / -1;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 26px;
+      border-radius: 999px;
+      border: none;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      min-width: 130px;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+      text-decoration: none;
+    }
+
+    /* LinkedIn icon circle */
+
+    .social-row {
+      margin-top: 10px;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f2f2f2;
+      color: #0a66c2;
+      font-size: 0.9rem;
+      border: 1px solid #dadada;
+    }
+
+    .social-icon:hover {
+      background: #e8f2ff;
+      text-decoration: none;
+    }
+
+    /* Responsive: stack on small screens */
+
+    @media (max-width: 900px) {
+      .split {
+        flex-direction: column;
+      }
+
+      .left {
+        width: 100%;
+        min-height: 40vh;
+      }
+
+      .right {
+        padding: 32px 16px 40px;
+      }
+
+      .inner {
+        max-width: 480px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .button-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media print {
-      body {
-        background: #ffffff;
+      .split {
+        flex-direction: column;
       }
 
-      .page {
-        padding: 0;
-      }
-
-      .wrapper {
-        border-radius: 0;
-        border: none;
+      .left {
+        min-height: 200px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <div class="wrapper">
-      <header>
+  <div class="split">
+    <div class="left"></div>
+
+    <div class="right">
+      <div class="inner">
+        <!-- You could replace "FN" with a small image logo if you like -->
+        <div class="initials">FN</div>
+
         <div class="name">Fatema Tuz Johra Nourin</div>
 
-        <div class="subtitle">
-          Graduate Teaching Assistant · GIS Technician · Spatial Data Science Researcher
+        <div class="tagline">
+          Graduate Teaching Assistant and GIS Technician in the Department of Community &amp; Regional Planning<br>
+          at Iowa State University.
         </div>
 
-        <div class="degree-line">
-          M.A. Community &amp; Regional Planning (with Minor in Statistics) – Iowa State University (ongoing)
-        </div>
-        <div class="degree-line">
-          M.A. Geography – University of Wyoming (2017–2019)
-        </div>
-        <div class="degree-line">
-          Bachelor of Urban &amp; Regional Planning – BUET (2010–2015)
+        <div class="degrees">
+          M.A. (ongoing) in Community &amp; Regional Planning, Minor in Statistics – Iowa State University<br>
+          M.A. in Geography – University of Wyoming (2019)<br>
+          Bachelor of Urban &amp; Regional Planning – BUET (2015)
         </div>
 
-        <nav aria-label="Main sections">
-          <div class="nav-links">
-            <a href="#research">Research</a>
-            <a href="#teaching">Teaching</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </nav>
-      </header>
+        <div class="button-grid">
+          <!-- Row 1 -->
+          <a class="btn" href="research.html">Research</a>
+          <a class="btn" href="research.html#teaching">Teaching</a>
 
-      <main>
-        <!-- RESEARCH -->
-        <section id="research">
-          <h2>Research</h2>
-          <div class="section-content">
-            <p>
-              My work focuses on spatial data science, GIS, and remote sensing for planning
-              and environmental applications. I am particularly interested in how geospatial
-              methods and survey-based models can help us understand risk, preparedness,
-              water security, and urban change.
-            </p>
+          <!-- Row 2 -->
+          <a class="btn" href="#projects" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'}); return false;">Projects</a>
+          <a class="btn" href="FatemaResume_Summer22.pdf" target="_blank" rel="noopener">CV &amp; Resume</a>
 
-            <div class="item">
-              <div class="item-title">Urban Growth and Land Use / Land Cover Dynamics</div>
-              <div class="item-meta">
-                Google Earth Engine · Land use / land cover · Urban sustainability
-              </div>
-              <ul>
-                <li>Analyzed land use/land cover categories and their sustainability implications using multi-temporal remote sensing imagery.</li>
-              </ul>
-            </div>
+          <!-- Row 3 (full-width contact button) -->
+          <a class="btn full" href="mailto:fnourin@iastate.edu">Contact</a>
+        </div>
 
-            <div class="item">
-              <div class="item-title">Water Security &amp; REACH Project</div>
-              <div class="item-meta">
-                Institute of Water and Flood Management (IWFM), BUET
-              </div>
-              <ul>
-                <li>Contributed to research on improving water security for vulnerable communities, including GIS-based land use mapping and change detection for Dhaka.</li>
-              </ul>
-            </div>
-
-            <p style="margin-top: 10px;">
-              A more detailed description of my teaching and research experience is available on my
-              <a href="research.html">Teaching &amp; Research page</a>.
-            </p>
-          </div>
-        </section>
-
-        <!-- TEACHING -->
-        <section id="teaching">
-          <h2>Teaching</h2>
-          <div class="section-content">
-            <div class="item">
-              <div class="item-title">Graduate Teaching Assistant – CRP 251 Fundamentals of GIS</div>
-              <div class="item-meta">
-                Department of Community &amp; Regional Planning · Iowa State University · 2020 – Present
-              </div>
-              <ul>
-                <li>Teach GIS labs using ArcGIS Pro, ArcGIS Online, StoryMaps, Survey123, Field Maps, and ArcGIS Insights.</li>
-                <li>Help students build hands-on skills in spatial analysis, map design, and data management for planning practice.</li>
-              </ul>
-            </div>
-
-            <div class="item">
-              <div class="item-title">Graduate Teaching Assistant – GIS Courses</div>
-              <div class="item-meta">
-                Department of Geography · University of Wyoming · 2017 – 2019
-              </div>
-              <ul>
-                <li>Supported courses such as Introduction to GIS and Advanced GIS.</li>
-                <li>Assisted students with spatial analysis projects, cartography, and GIS lab exercises.</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section id="projects">
-          <h2>Projects</h2>
-          <div class="section-content">
-            <div class="item">
-              <div class="item-title">NDWI Trend Analysis &amp; Hurst Exponent Mapping</div>
-              <div class="item-meta">
-                Remote sensing · Time series · Python
-              </div>
-              <ul>
-                <li>Computed pixel-wise Hurst exponents on NDWI raster time series to evaluate persistence in surface water dynamics across multiple periods.</li>
-                <li>Developed scripts for reproducible pre-processing, regression, and map production.</li>
-              </ul>
-            </div>
-
-            <div class="item">
-              <div class="item-title">ACPF Crop Boundary &amp; Map Services</div>
-              <div class="item-meta">
-                ISU GIS Support &amp; Research Facility
-              </div>
-              <ul>
-                <li>Delineated crop boundaries and supported conservation planning workflows using ArcGIS Pro and related tools.</li>
-                <li>Assisted with LiDAR classification, historic topographic map preparation, and time-enabled web map services.</li>
-              </ul>
-            </div>
-
-            <div class="item">
-              <div class="item-title">Eviction Mapping for unevictIA</div>
-              <div class="item-meta">
-                Iowa, USA · Shiny R · Web mapping
-              </div>
-              <ul>
-                <li>Helped create the first eviction record map for 22 Iowa counties.</li>
-                <li>Built interactive visualizations using Shiny R to communicate housing justice data to a wider audience.</li>
-              </ul>
-            </div>
-
-            <p style="margin-top: 10px;">
-              Additional media, talks, and resources are collected on my
-              <a href="Resources.html">Media &amp; Resources page</a>.
-            </p>
-          </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact">
-          <h2>Contact</h2>
-          <div class="section-content contact-list">
-            <ul>
-              <li><strong>Email:</strong> <a href="mailto:fnourin@iastate.edu">fnourin@iastate.edu</a></li>
-              <li><strong>GitHub:</strong> <a href="https://github.com/fnourin" target="_blank" rel="noopener">github.com/fnourin</a></li>
-              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/fatema-tuz-johra-nourin-993200134/" target="_blank" rel="noopener">
-                linkedin.com/in/fatema-tuz-johra-nourin-993200134/</a></li>
-              <li><strong>Location:</strong> Ames, Iowa, USA</li>
-              <li><strong>Resume (PDF):</strong> <a href="FatemaResume_Summer22.pdf" target="_blank" rel="noopener">Download</a></li>
-            </ul>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <div>Last updated: <!-- update this manually --> 2025.</div>
-      </footer>
+        <div class="social-row">
+          <a class="social-icon"
+             href="https://www.linkedin.com/in/fatema-tuz-johra-nourin-993200134/"
+             target="_blank" rel="noopener"
+             aria-label="LinkedIn profile">
+            in
+          </a>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Optional: simple projects anchor, so the Projects button has somewhere to scroll -->
+  <div id="projects" style="padding: 24px 16px 40px; max-width: 800px; margin: 0 auto;">
+    <!-- You can fill this with real content later, or delete this block if not needed -->
   </div>
 </body>
 </html>
+
