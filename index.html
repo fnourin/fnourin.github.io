@@ -5,7 +5,7 @@
   <title>Fatema Tuz Johra Nourin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Portfolio of Fatema Tuz Johra Nourin – GIS technician, graduate teaching assistant, and spatial data science researcher.">
+        content="Portfolio of Fatema Tuz Johra Nourin – PhD student in Geography, Graduate Teaching & Research Assistant, and GIS/remote sensing specialist.">
 
   <!-- Google Fonts: serif for name, sans for text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,18 +58,16 @@
     }
 
     /* LEFT SIDE: portrait image */
-
     .left {
       flex: 1;
       min-height: 50vh;
-      background-image: url("portrait.jpg"); /* <-- put your image file here */
+      background-image: url("portrait.jpg"); /* your portrait file */
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
     }
 
     /* RIGHT SIDE: text + buttons */
-
     .right {
       flex: 1;
       display: flex;
@@ -83,15 +81,6 @@
       max-width: 520px;
       text-align: center;
     }
-
-    /* Initials / logo (simple text version) */
-    .initials {
-      font-family: var(--font-serif);
-      font-size: 2.4rem;
-      margin-bottom: 20px;
-    }
-
-    /* Name + academic info */
 
     .name {
       font-family: var(--font-serif);
@@ -114,14 +103,13 @@
       margin-bottom: 26px;
     }
 
-    /* Button grid like the example */
-
+    /* Button grid */
     .button-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 14px 22px;
       justify-items: center;
-      margin-bottom: 26px;
+      margin-bottom: 10px;
     }
 
     .button-grid .full {
@@ -149,12 +137,7 @@
       text-decoration: none;
     }
 
-    /* LinkedIn icon circle */
-
-    .social-row {
-      margin-top: 10px;
-    }
-
+    /* LinkedIn icon on the right under Resume */
     .social-icon {
       display: inline-flex;
       align-items: center;
@@ -173,7 +156,48 @@
       text-decoration: none;
     }
 
-    /* Responsive: stack on small screens */
+    /* Projects section */
+    #projects-wrapper {
+      padding: 24px 16px 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    #projects-wrapper h2 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin: 0 0 10px;
+      color: var(--text-muted);
+    }
+
+    #projects-wrapper .item {
+      margin-bottom: 16px;
+    }
+
+    #projects-wrapper .item-title {
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    #projects-wrapper .item-meta {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    #projects-wrapper ul {
+      margin: 4px 0 0 18px;
+      padding: 0;
+    }
+
+    #projects-wrapper li + li {
+      margin-top: 3px;
+    }
 
     @media (max-width: 900px) {
       .split {
@@ -186,7 +210,7 @@
       }
 
       .right {
-        padding: 32px 16px 40px;
+        padding: 32px 16px 32px;
       }
 
       .inner {
@@ -204,7 +228,6 @@
       .split {
         flex-direction: column;
       }
-
       .left {
         min-height: 200px;
       }
@@ -217,51 +240,94 @@
 
     <div class="right">
       <div class="inner">
-        <!-- You could replace "FN" with a small image logo if you like -->
-        <div class="initials">FN</div>
 
         <div class="name">Fatema Tuz Johra Nourin</div>
 
         <div class="tagline">
-          Graduate Teaching Assistant and GIS Technician in the Department of Community &amp; Regional Planning<br>
-          at Iowa State University.
+          PhD Student &amp; Graduate Teaching/Research Assistant<br>
+          Department of Geography, The University of Alabama · Tuscaloosa, AL
         </div>
 
         <div class="degrees">
-          M.A. (ongoing) in Community &amp; Regional Planning, Minor in Statistics – Iowa State University<br>
-          M.A. in Geography – University of Wyoming (2019)<br>
-          Bachelor of Urban &amp; Regional Planning – BUET (2015)
+          PhD in Geography — The University of Alabama (Expected Dec 2026)<br>
+          MA in Community &amp; Regional Planning — Iowa State University (2022)<br>
+          MA in Geography — University of Wyoming (2019)<br>
+          Bachelor of Urban &amp; Regional Planning — BUET (2015)
         </div>
 
         <div class="button-grid">
+
           <!-- Row 1 -->
           <a class="btn" href="research.html">Research</a>
           <a class="btn" href="research.html#teaching">Teaching</a>
 
           <!-- Row 2 -->
-          <a class="btn" href="#projects" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'}); return false;">Projects</a>
-          <a class="btn" href="FatemaResume_Summer22.pdf" target="_blank" rel="noopener">CV &amp; Resume</a>
+          <a class="btn"
+             href="#projects"
+             onclick="document.getElementById('projects-wrapper').scrollIntoView({behavior:'smooth'}); return false;">
+            Projects
+          </a>
+          <a class="btn" href="FatemaResume_Summer22.pdf" target="_blank" rel="noopener">
+            Resume
+          </a>
 
-          <!-- Row 3 (full-width contact button) -->
-          <a class="btn full" href="mailto:fnourin@iastate.edu">Contact</a>
+          <!-- Row 3: Contact directly below Projects row -->
+          <a class="btn full" href="mailto:fnourin@crimson.ua.edu">Contact</a>
         </div>
 
-        <div class="social-row">
+        <!-- LinkedIn icon aligned to the right under Resume -->
+        <div style="display: flex; justify-content: flex-end; margin-top: 6px;">
           <a class="social-icon"
-             href="https://www.linkedin.com/in/fatema-tuz-johra-nourin-993200134/"
+             href="https://www.linkedin.com/in/fatematuzjohranourin993200134/"
              target="_blank" rel="noopener"
              aria-label="LinkedIn profile">
             in
           </a>
         </div>
+
       </div>
     </div>
   </div>
 
-  <!-- Optional: simple projects anchor, so the Projects button has somewhere to scroll -->
-  <div id="projects" style="padding: 24px 16px 40px; max-width: 800px; margin: 0 auto;">
-    <!-- You can fill this with real content later, or delete this block if not needed -->
+  <!-- Simple projects/overview section so the Projects button scrolls somewhere useful -->
+  <div id="projects-wrapper">
+    <h2>Selected Projects &amp; Research</h2>
+
+    <div class="item">
+      <div class="item-title">Shoreline Change &amp; Coastal Resilience in Mobile Bay, Alabama</div>
+      <div class="item-meta">Graduate Research Assistant · The University of Alabama</div>
+      <ul>
+        <li>Analyzed 25 years of Landsat imagery in Google Earth Engine to quantify shoreline change and inform coastal resilience planning.</li>
+        <li>Supported CIROH workshops with 50+ stakeholders using interactive mapping and spatial exercises.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Iowa Historical Topographic Map Service</div>
+      <div class="item-meta">GIS Technician · Iowa State University GIS Facility</div>
+      <ul>
+        <li>Created a reusable ArcGIS workflow to process and publish time-enabled web layers spanning 1920–2021.</li>
+        <li>Processed LiDAR data and georeferenced historic DOT maps into interactive web services.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Eviction Mapping &amp; Housing Justice (unevictIA)</div>
+      <div class="item-meta">GIS Intern · unevictIA</div>
+      <ul>
+        <li>Produced the first eviction record maps for 22 Iowa counties.</li>
+        <li>Developed an interactive R Shiny dashboard to visualize housing trends and support housing justice initiatives.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Urban Growth &amp; Water Security – REACH, Dhaka</div>
+      <div class="item-meta">Research Associate · Institute of Water and Flood Management (IWFM), BUET</div>
+      <ul>
+        <li>Used multi-temporal satellite imagery (1995–2005) to quantify land-use change and urban expansion in Dhaka.</li>
+        <li>Contributed to analysis on how urban change affects water access for vulnerable communities.</li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
-
