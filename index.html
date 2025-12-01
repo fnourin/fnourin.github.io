@@ -112,10 +112,6 @@
       margin-bottom: 10px;
     }
 
-    .button-grid .full {
-      grid-column: 1 / -1;
-    }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -137,7 +133,7 @@
       text-decoration: none;
     }
 
-    /* LinkedIn icon on the right under Resume */
+    /* LinkedIn icon (grid item) */
     .social-icon {
       display: inline-flex;
       align-items: center;
@@ -149,6 +145,7 @@
       color: #0a66c2;
       font-size: 0.9rem;
       border: 1px solid #dadada;
+      padding-top: 1px; /* little visual centering */
     }
 
     .social-icon:hover {
@@ -255,6 +252,7 @@
           Bachelor of Urban &amp; Regional Planning — BUET (2015)
         </div>
 
+        <!-- BUTTONS + ICON GRID -->
         <div class="button-grid">
 
           <!-- Row 1 -->
@@ -271,25 +269,25 @@
             Resume
           </a>
 
-          <!-- Row 3: Contact directly below Projects row -->
-          <a class="btn full" href="mailto:fnourin@crimson.ua.edu">Contact</a>
-        </div>
+          <!-- Row 3: Contact on LEFT, LinkedIn icon on RIGHT -->
+          <a class="btn" href="mailto:fnourin@crimson.ua.edu">Contact</a>
 
-        <!-- LinkedIn icon aligned to the right under Resume -->
-        <div style="display: flex; justify-content: flex-end; margin-top: 6px;">
-          <a class="social-icon"
-             href="https://www.linkedin.com/in/fatematuzjohranourin993200134/"
-             target="_blank" rel="noopener"
-             aria-label="LinkedIn profile">
-            in
-          </a>
+          <div style="display:flex; justify-content:center; align-items:center; width:100%;">
+            <a class="social-icon"
+               href="https://www.linkedin.com/in/fatematuzjohranourin993200134/"
+               target="_blank" rel="noopener"
+               aria-label="LinkedIn profile">
+              in
+            </a>
+          </div>
+
         </div>
 
       </div>
     </div>
   </div>
 
-  <!-- Simple projects/overview section so the Projects button scrolls somewhere useful -->
+  <!-- Projects / research overview for the Projects button -->
   <div id="projects-wrapper">
     <h2>Selected Projects &amp; Research</h2>
 
