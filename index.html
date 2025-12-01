@@ -1,740 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Fatema Tuz Johra Nourin – GIS & Spatial Data Science</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>Fatema Tuz Johra Nourin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Resume website for Fatema Tuz Johra Nourin – Graduate Teaching Assistant and GIS Technician with experience in spatial data science, remote sensing, and statistics." />
-  <link rel="stylesheet" href="stylesheet.css" />
+        content="Portfolio of Fatema Tuz Johra Nourin – GIS technician, graduate teaching assistant, and spatial data science researcher.">
   <style>
     :root {
-      --bg: #f3f4f6;
-      --bg-alt: #ffffff;
-      --accent: #2563eb;
-      --accent-soft: #dbeafe;
-      --text-main: #111827;
-      --text-muted: #6b7280;
-      --border-subtle: #e5e7eb;
-      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
-      --radius-lg: 18px;
-      --radius-xl: 26px;
-      --radius-pill: 999px;
-      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
+      --bg: #f6f6f7;
+      --text: #111111;
+      --muted: #555555;
+      --accent: #0b5fff;
+      --border: #dddddd;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --max-width: 820px;
     }
 
     * {
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
-      font-family: var(--font-sans);
-      background: radial-gradient(circle at top left, #e0f2fe, #f3f4f6 40%) fixed;
-      color: var(--text-main);
+      padding: 0;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
     }
 
     .page {
       min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 32px 16px;
+      padding: 32px 16px 40px;
     }
 
-    .shell {
+    .wrapper {
       width: 100%;
-      max-width: 1024px;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.98));
-      box-shadow: var(--shadow-soft);
-      border-radius: 32px;
-      padding: 28px 22px 32px;
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      backdrop-filter: blur(16px);
+      max-width: var(--max-width);
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 24px 18px 28px;
     }
 
     @media (min-width: 768px) {
-      .shell {
-        padding: 34px 32px 40px;
+      .wrapper {
+        padding: 32px 40px 40px;
       }
     }
 
-    /* Top nav */
-    .top-nav {
-      display: flex;
-      justify-content: flex-end;
-      gap: 12px;
-      font-size: 0.85rem;
-      margin-bottom: 14px;
-    }
-
-    .nav-pill {
-      padding: 6px 12px;
-      border-radius: var(--radius-pill);
-      border: 1px solid transparent;
-      background: transparent;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .nav-pill--active {
-      background: var(--accent-soft);
-      color: #1d4ed8;
-      border-color: rgba(37, 99, 235, 0.22);
-    }
-
-    .nav-pill:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* Header / identity */
+    /* Top intro */
     header {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      border-bottom: 1px solid var(--border-subtle);
-      padding-bottom: 20px;
-      margin-bottom: 24px;
-    }
-
-    @media (min-width: 768px) {
-      header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
-
-    .identity {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .name-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
+      text-align: left;
+      margin-bottom: 28px;
     }
 
     .name {
-      font-size: 2rem;
+      font-size: clamp(2.0rem, 4vw, 2.6rem);
       font-weight: 700;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
+      margin-bottom: 12px;
     }
 
-    .headline-role {
-      font-size: 0.98rem;
-      color: var(--text-muted);
+    .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 6px;
     }
 
-    .role-subline {
-      font-size: 0.88rem;
-      color: var(--text-muted);
+    .degree-line {
+      font-size: 0.95rem;
+      color: var(--muted);
     }
 
-    .pill {
-      padding: 3px 10px;
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(37, 99, 235, 0.16);
-      background: rgba(219, 234, 254, 0.8);
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: #1d4ed8;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+    .degree-line + .degree-line {
+      margin-top: 2px;
     }
 
-    .contact {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 6px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
+    /* Simple nav like the reference site */
+    nav {
+      margin-top: 18px;
+      margin-bottom: 10px;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
     }
 
-    @media (min-width: 768px) {
-      .contact {
-        align-items: flex-end;
-      }
-    }
-
-    .contact-row {
+    .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      justify-content: flex-end;
-    }
-
-    .contact-tag {
-      padding: 6px 10px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-subtle);
-      background: rgba(255, 255, 255, 0.95);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
-    }
-
-    /* Summary section */
-    .summary {
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
       gap: 16px;
-      margin-bottom: 24px;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 767px) {
-      .summary {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--accent);
     }
 
-    .summary-text {
-      font-size: 0.96rem;
-      color: var(--text-muted);
-      line-height: 1.6;
+    .nav-links a:hover {
+      text-decoration: underline;
     }
 
-    .summary-meta {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 10px;
-    }
-
-    .badge-block {
-      padding: 10px 14px;
-      border-radius: 18px;
-      border: 1px solid var(--border-subtle);
-      background: rgba(255, 255, 255, 0.95);
-      font-size: 0.82rem;
-    }
-
-    .badge-label {
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      margin-bottom: 2px;
-    }
-
-    .badge-value {
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    /* Main layout */
+    /* Body sections */
     main {
-      display: grid;
-      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.2fr);
-      gap: 24px;
-    }
-
-    @media (max-width: 900px) {
-      main {
-        grid-template-columns: minmax(0, 1fr);
-      }
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
     }
 
     section {
+      margin-bottom: 28px;
+    }
+
+    section:last-of-type {
       margin-bottom: 20px;
     }
 
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.86rem;
-      letter-spacing: 0.11em;
+    h2 {
+      font-size: 1.05rem;
       text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 10px;
+      letter-spacing: 0.16em;
+      margin: 0 0 10px;
+      color: var(--muted);
     }
 
-    .section-title::before {
-      content: "";
-      width: 16px;
-      height: 2px;
-      border-radius: 999px;
-      background: linear-gradient(to right, var(--accent), transparent);
-    }
-
-    .card {
-      background: var(--bg-alt);
-      border-radius: var(--radius-lg);
-      padding: 12px 14px;
-      border: 1px solid rgba(226, 232, 240, 0.95);
-    }
-
-    .card + .card {
-      margin-top: 10px;
-    }
-
-    .role-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 4px;
-      align-items: baseline;
-    }
-
-    .role-title {
-      font-weight: 600;
+    .section-content {
       font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--muted);
     }
 
-    .role-meta {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      text-align: right;
-      white-space: nowrap;
+    .item {
+      margin-bottom: 14px;
     }
 
-    .org {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-      margin-bottom: 4px;
-    }
-
-    .tag {
-      font-size: 0.72rem;
-      padding: 3px 8px;
-      border-radius: var(--radius-pill);
-      background: var(--accent-soft);
-      color: #1d4ed8;
-      border: 1px solid rgba(37, 99, 235, 0.16);
-      white-space: nowrap;
-    }
-
-    ul.bullets {
-      padding-left: 18px;
-      margin: 6px 0 4px;
-      font-size: 0.86rem;
-      color: var(--text-muted);
-    }
-
-    ul.bullets li {
-      margin-bottom: 3px;
-    }
-
-    .edu-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      font-size: 0.9rem;
-    }
-
-    .edu-main {
-      font-weight: 500;
-    }
-
-    .edu-sub {
-      font-size: 0.84rem;
-      color: var(--text-muted);
-    }
-
-    .skill-groups {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      font-size: 0.86rem;
-    }
-
-    .skill-group-title {
+    .item-title {
       font-weight: 600;
       margin-bottom: 2px;
+      color: var(--text);
     }
 
-    .skill-group-body {
-      color: var(--text-muted);
-      line-height: 1.5;
+    .item-meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 4px;
     }
 
-    .sidebar-card {
-      background: var(--bg-alt);
-      border-radius: var(--radius-lg);
-      padding: 12px 14px;
-      border: 1px solid rgba(226, 232, 240, 0.9);
-      font-size: 0.86rem;
-      color: var(--text-muted);
-    }
-
-    .sidebar-card + .sidebar-card {
-      margin-top: 10px;
-    }
-
-    .link-list {
-      list-style: none;
+    ul {
+      margin: 4px 0 0 18px;
       padding: 0;
-      margin: 4px 0 0;
-      font-size: 0.86rem;
+      font-size: 0.95rem;
+      color: var(--muted);
     }
 
-    .link-list li + li {
-      margin-top: 4px;
+    li + li {
+      margin-top: 3px;
+    }
+
+    /* Contact/social list */
+    .contact-list, .contact-list ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-list li {
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     footer {
-      margin-top: 26px;
-      font-size: 0.74rem;
-      color: var(--text-muted);
-      text-align: center;
-    }
-
-    .print-note {
-      margin-top: 4px;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: var(--muted);
     }
 
     @media print {
       body {
         background: #ffffff;
       }
+
       .page {
         padding: 0;
       }
-      .shell {
-        box-shadow: none;
+
+      .wrapper {
         border-radius: 0;
         border: none;
-        padding: 16px 20px;
-      }
-      .top-nav {
-        display: none;
-      }
-      .contact-tag {
-        border: none;
-        padding: 0;
-      }
-      footer {
-        margin-top: 12px;
       }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <div class="shell">
-
-      <!-- Simple nav linking your other pages -->
-      <nav class="top-nav">
-        <a class="nav-pill nav-pill--active" href="index.html">Home</a>
-        <a class="nav-pill" href="research.html">Teaching &amp; Research Experience</a>
-        <a class="nav-pill" href="Resources.html">Media &amp; Resources</a>
-      </nav>
-
+    <div class="wrapper">
       <header>
-        <div class="identity">
-          <div class="name-row">
-            <div class="name">Fatema Tuz Johra Nourin</div>
-            <span class="pill">GIS &amp; Spatial Data Science</span>
-          </div>
-          <div class="headline-role">
-            Graduate Teaching Assistant · GIS Technician
-          </div>
-          <div class="role-subline">
-            Department of Community &amp; Regional Planning · Geographic Information Systems Support &amp; Research Facility · Iowa State University
-          </div>
+        <div class="name">Fatema Tuz Johra Nourin</div>
+
+        <div class="subtitle">
+          Graduate Teaching Assistant · GIS Technician · Spatial Data Science Researcher
         </div>
 
-        <div class="contact">
-          <div class="contact-row">
-            <span class="dot" title="Actively engaged in research and teaching"></span>
-            <span class="contact-tag">Ames, Iowa, USA</span>
-          </div>
-          <div class="contact-row">
-            <a class="contact-tag" href="mailto:fnourin@iastate.edu">fnourin@iastate.edu</a>
-            <span class="contact-tag">+1 (307) 343-6772</span>
-          </div>
-          <div class="contact-row">
-            <a class="contact-tag"
-               href="https://www.linkedin.com/in/fatema-tuz-johra-nourin-993200134/"
-               target="_blank">LinkedIn</a>
-            <a class="contact-tag" href="https://github.com/fnourin" target="_blank">GitHub</a>
-            <a class="contact-tag" href="FatemaResume_Summer22.pdf" target="_blank">Download Resume (PDF)</a>
-          </div>
+        <div class="degree-line">
+          M.A. Community &amp; Regional Planning (with Minor in Statistics) – Iowa State University (ongoing)
         </div>
+        <div class="degree-line">
+          M.A. Geography – University of Wyoming (2017–2019)
+        </div>
+        <div class="degree-line">
+          Bachelor of Urban &amp; Regional Planning – BUET (2010–2015)
+        </div>
+
+        <nav aria-label="Main sections">
+          <div class="nav-links">
+            <a href="#research">Research</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
       </header>
 
-      <div class="summary">
-        <div class="summary-text">
-          I am a geospatial researcher and educator with experience across open source, enterprise,
-          and cloud GIS platforms. My work focuses on spatial data science, remote sensing, and
-          statistical analysis for planning and environmental applications. I have taught
-          fundamentals of GIS and supported applied research projects that use Python, R, and
-          modern GIS tools to answer real-world questions about land use, water, and urban systems.
-          I am interested in opportunities that combine research, teaching, and applied spatial
-          analytics.
-        </div>
-        <div class="summary-meta">
-          <div class="badge-block">
-            <div class="badge-label">Current Roles</div>
-            <div class="badge-value">Graduate Teaching Assistant</div>
-            <div>GIS Technician, GIS Support &amp; Research Facility</div>
-          </div>
-          <div class="badge-block">
-            <div class="badge-label">Interests</div>
-            <div class="badge-value">GIS · Remote Sensing · Statistics</div>
-            <div>Google Earth Engine, urban &amp; environmental planning</div>
-          </div>
-        </div>
-      </div>
-
       <main>
-        <!-- LEFT COLUMN -->
-        <div>
-          <!-- Experience -->
-          <section>
-            <div class="section-title">Experience</div>
+        <!-- RESEARCH -->
+        <section id="research">
+          <h2>Research</h2>
+          <div class="section-content">
+            <p>
+              My work focuses on spatial data science, GIS, and remote sensing for planning
+              and environmental applications. I am particularly interested in how geospatial
+              methods and survey-based models can help us understand risk, preparedness,
+              water security, and urban change.
+            </p>
 
-            <div class="card">
-              <div class="role-header">
-                <div class="role-title">GIS Technician</div>
-                <div class="role-meta">GIS Facility, Iowa State University · 2021 – Present</div>
+            <div class="item">
+              <div class="item-title">Urban Growth and Land Use / Land Cover Dynamics</div>
+              <div class="item-meta">
+                Google Earth Engine · Land use / land cover · Urban sustainability
               </div>
-              <div class="org">
-                Geographic Information Systems Support &amp; Research Facility · Ames, Iowa
-              </div>
-              <div class="tags">
-                <span class="tag">GIS</span>
-                <span class="tag">Remote Sensing</span>
-                <span class="tag">Python</span>
-              </div>
-              <ul class="bullets">
-                <li>Support spatial data workflows including crop boundary delineation for the Agricultural Conservation Planning Framework (ACPF) project.</li>
-                <li>Prepared historical topographic map services and pipelines used across multiple projects, including georeferencing historic maps of Iowa.</li>
-                <li>Worked with LiDAR classification, time-enabled map services, and web mapping solutions for internal and external stakeholders.</li>
+              <ul>
+                <li>Analyzed land use/land cover categories and their sustainability implications using multi-temporal remote sensing imagery.</li>
               </ul>
             </div>
 
-            <div class="card">
-              <div class="role-header">
-                <div class="role-title">Graduate Teaching Assistant</div>
-                <div class="role-meta">Iowa State University · 2020 – Present</div>
+            <div class="item">
+              <div class="item-title">Water Security &amp; REACH Project</div>
+              <div class="item-meta">
+                Institute of Water and Flood Management (IWFM), BUET
               </div>
-              <div class="org">
-                Department of Community &amp; Regional Planning
-              </div>
-              <div class="tags">
-                <span class="tag">Teaching</span>
-                <span class="tag">ArcGIS</span>
-                <span class="tag">CRP 251</span>
-              </div>
-              <ul class="bullets">
-                <li>Teach GIS labs for <em>CRP 251 – Fundamentals of GIS</em> using ArcGIS Online, ArcGIS Pro, and related applications such as ArcGIS Insights, StoryMaps, Survey123, and Field Maps.</li>
-                <li>Support students in developing hands-on, project-based GIS skills relevant to planning practice.</li>
+              <ul>
+                <li>Contributed to research on improving water security for vulnerable communities, including GIS-based land use mapping and change detection for Dhaka.</li>
               </ul>
             </div>
 
-            <div class="card">
-              <div class="role-header">
-                <div class="role-title">Graduate Teaching Assistant</div>
-                <div class="role-meta">University of Wyoming · 2017 – 2019</div>
+            <p style="margin-top: 10px;">
+              A more detailed description of my teaching and research experience is available on my
+              <a href="research.html">Teaching &amp; Research page</a>.
+            </p>
+          </div>
+        </section>
+
+        <!-- TEACHING -->
+        <section id="teaching">
+          <h2>Teaching</h2>
+          <div class="section-content">
+            <div class="item">
+              <div class="item-title">Graduate Teaching Assistant – CRP 251 Fundamentals of GIS</div>
+              <div class="item-meta">
+                Department of Community &amp; Regional Planning · Iowa State University · 2020 – Present
               </div>
-              <div class="org">
-                Department of Geography
-              </div>
-              <div class="tags">
-                <span class="tag">Teaching</span>
-                <span class="tag">GIS</span>
-              </div>
-              <ul class="bullets">
-                <li>Assisted with courses including <em>Introduction to GIS (GEOG 4200)</em> and <em>Advanced GIS (GEOG 4210/5210)</em>.</li>
-                <li>Helped students with spatial analysis, data management, and cartographic visualization using GIS software.</li>
+              <ul>
+                <li>Teach GIS labs using ArcGIS Pro, ArcGIS Online, StoryMaps, Survey123, Field Maps, and ArcGIS Insights.</li>
+                <li>Help students build hands-on skills in spatial analysis, map design, and data management for planning practice.</li>
               </ul>
             </div>
 
-            <div class="card">
-              <div class="role-header">
-                <div class="role-title">GIS Intern</div>
-                <div class="role-meta">unevictIA · Summer 2021</div>
+            <div class="item">
+              <div class="item-title">Graduate Teaching Assistant – GIS Courses</div>
+              <div class="item-meta">
+                Department of Geography · University of Wyoming · 2017 – 2019
               </div>
-              <div class="org">
-                Iowa, USA
+              <ul>
+                <li>Supported courses such as Introduction to GIS and Advanced GIS.</li>
+                <li>Assisted students with spatial analysis projects, cartography, and GIS lab exercises.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="section-content">
+            <div class="item">
+              <div class="item-title">NDWI Trend Analysis &amp; Hurst Exponent Mapping</div>
+              <div class="item-meta">
+                Remote sensing · Time series · Python
               </div>
-              <div class="tags">
-                <span class="tag">R / Shiny</span>
-                <span class="tag">Web Mapping</span>
-              </div>
-              <ul class="bullets">
-                <li>Developed the first eviction record map for 22 of Iowa’s most populated counties.</li>
-                <li>Created interactive, year-wise eviction charts using Shiny R to support public-facing communication of housing justice data.</li>
+              <ul>
+                <li>Computed pixel-wise Hurst exponents on NDWI raster time series to evaluate persistence in surface water dynamics across multiple periods.</li>
+                <li>Developed scripts for reproducible pre-processing, regression, and map production.</li>
               </ul>
             </div>
 
-            <div class="card">
-              <div class="role-header">
-                <div class="role-title">Research Associate</div>
-                <div class="role-meta">IWFM, BUET · 2016 – 2017</div>
+            <div class="item">
+              <div class="item-title">ACPF Crop Boundary &amp; Map Services</div>
+              <div class="item-meta">
+                ISU GIS Support &amp; Research Facility
               </div>
-              <div class="org">
-                Institute of Water and Flood Management, Bangladesh University of Engineering and Technology
-              </div>
-              <div class="tags">
-                <span class="tag">Water Security</span>
-                <span class="tag">Land Use / Land Cover</span>
-              </div>
-              <ul class="bullets">
-                <li>Contributed to the REACH project on improving water security for the poor, led by the University of Oxford.</li>
-                <li>Performed GIS data collection, map preparation, and land use/land cover change detection for Dhaka using multi-temporal imagery.</li>
+              <ul>
+                <li>Delineated crop boundaries and supported conservation planning workflows using ArcGIS Pro and related tools.</li>
+                <li>Assisted with LiDAR classification, historic topographic map preparation, and time-enabled web map services.</li>
               </ul>
             </div>
-          </section>
 
-          <!-- Education -->
-          <section>
-            <div class="section-title">Education</div>
-
-            <div class="card">
-              <div class="edu-item">
-                <div>
-                  <div class="edu-main">M.A. in Community &amp; Regional Planning (with Minor in Statistics)</div>
-                  <div class="edu-sub">
-                    Iowa State University, Ames, Iowa · Ongoing
-                  </div>
-                </div>
-                <div class="role-meta">2020 – Present</div>
+            <div class="item">
+              <div class="item-title">Eviction Mapping for unevictIA</div>
+              <div class="item-meta">
+                Iowa, USA · Shiny R · Web mapping
               </div>
-            </div>
-
-            <div class="card">
-              <div class="edu-item">
-                <div>
-                  <div class="edu-main">M.A. in Geography</div>
-                  <div class="edu-sub">
-                    University of Wyoming
-                  </div>
-                </div>
-                <div class="role-meta">2017 – 2019</div>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="edu-item">
-                <div>
-                  <div class="edu-main">Bachelor of Urban &amp; Regional Planning</div>
-                  <div class="edu-sub">
-                    Bangladesh University of Engineering &amp; Technology (BUET)
-                  </div>
-                </div>
-                <div class="role-meta">2010 – 2015</div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <!-- RIGHT COLUMN -->
-        <aside>
-          <!-- Skills -->
-          <section>
-            <div class="section-title">Skills</div>
-            <div class="sidebar-card">
-              <div class="skill-groups">
-                <div>
-                  <div class="skill-group-title">Programming</div>
-                  <div class="skill-group-body">
-                    Python; R; SQL; ArcPy; geospatial scripting &amp; automation
-                  </div>
-                </div>
-                <div>
-                  <div class="skill-group-title">GIS &amp; Remote Sensing</div>
-                  <div class="skill-group-body">
-                    QGIS, ArcGIS Pro/Desktop/Online, Google Earth Engine, ILWIS, GDAL
-                  </div>
-                </div>
-                <div>
-                  <div class="skill-group-title">Data Analysis</div>
-                  <div class="skill-group-body">
-                    NumPy, Pandas, Matplotlib, geemap; SPSS; PostgreSQL; Microsoft SQL Server; Excel
-                  </div>
-                </div>
-                <div>
-                  <div class="skill-group-title">Other Tools</div>
-                  <div class="skill-group-body">
-                    AutoCAD, Microsoft Project; survey design and basic statistics
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Courses -->
-          <section>
-            <div class="section-title">Graduate Coursework</div>
-            <div class="sidebar-card">
-              <ul class="bullets">
-                <li><strong>GIS Applications:</strong> Smart Cities, Internet GIS, Fire Ecology</li>
-                <li><strong>GIS Programming:</strong> GIS Programming &amp; Automation, Spatial Modeling, Intro to Python Spatial Analysis</li>
-                <li><strong>Remote Sensing:</strong> Fundamentals of Remote Sensing</li>
-                <li><strong>Statistics &amp; Data:</strong> Statistical Methods for Research, Regression Analysis, Environmental Data Management, Statistical Theory for Research Workers</li>
+              <ul>
+                <li>Helped create the first eviction record map for 22 Iowa counties.</li>
+                <li>Built interactive visualizations using Shiny R to communicate housing justice data to a wider audience.</li>
               </ul>
             </div>
-          </section>
 
-          <!-- Projects / Research -->
-          <section>
-            <div class="section-title">Selected Research &amp; Projects</div>
-            <div class="sidebar-card">
-              <ul class="bullets">
-                <li><strong>Urban Growth Sustainability:</strong> Assessment of land use/land cover categories using Google Earth Engine for master’s dissertation work.</li>
-                <li><strong>Wildfire &amp; Social Media:</strong> Exploratory study of wildfire impacts in Yellowstone National Park using biased Flickr data.</li>
-                <li><strong>Connected &amp; Automated Vehicles:</strong> Evaluated operational performance of innovative intersections and transit priority under connected vehicle scenarios.</li>
-              </ul>
-              <ul class="link-list">
-                <li><a href="research.html">View detailed teaching &amp; research experience</a></li>
-              </ul>
-            </div>
-          </section>
+            <p style="margin-top: 10px;">
+              Additional media, talks, and resources are collected on my
+              <a href="Resources.html">Media &amp; Resources page</a>.
+            </p>
+          </div>
+        </section>
 
-          <!-- Honors -->
-          <section>
-            <div class="section-title">Honors &amp; Awards</div>
-            <div class="sidebar-card">
-              <ul class="bullets">
-                <li>Burgess Graduate Scholarship (2022)</li>
-                <li>Outstanding Graduate Student Award (2019)</li>
-                <li>Eta Eta Upsilon Geographic Honor Society Induction (2019)</li>
-                <li>International Student Scholarship (2018)</li>
-                <li>Graduate Student Travel Award (2019)</li>
-                <li>Kleinhammer Endowment Award (2018)</li>
-              </ul>
-            </div>
-          </section>
-        </aside>
+        <!-- CONTACT -->
+        <section id="contact">
+          <h2>Contact</h2>
+          <div class="section-content contact-list">
+            <ul>
+              <li><strong>Email:</strong> <a href="mailto:fnourin@iastate.edu">fnourin@iastate.edu</a></li>
+              <li><strong>GitHub:</strong> <a href="https://github.com/fnourin" target="_blank" rel="noopener">github.com/fnourin</a></li>
+              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/fatema-tuz-johra-nourin-993200134/" target="_blank" rel="noopener">
+                linkedin.com/in/fatema-tuz-johra-nourin-993200134/</a></li>
+              <li><strong>Location:</strong> Ames, Iowa, USA</li>
+              <li><strong>Resume (PDF):</strong> <a href="FatemaResume_Summer22.pdf" target="_blank" rel="noopener">Download</a></li>
+            </ul>
+          </div>
+        </section>
       </main>
 
       <footer>
-        <div>Last updated: (edit this with the current month &amp; year)</div>
-        <div class="print-note">Tip: Use your browser’s “Print → Save as PDF” to export this page as a one-page resume.</div>
+        <div>Last updated: <!-- update this manually --> 2025.</div>
       </footer>
-
     </div>
   </div>
 </body>
