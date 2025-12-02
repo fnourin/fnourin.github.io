@@ -1,164 +1,251 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Home</title>
-  
-    <meta name="author" content="Fatema Tuz Johra Nourin">
-	
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Fatema,Nourin, Nourin Fatema, Fatema Nourin, GIS, research, Remote sensing, python, API">
-    <link rel="stylesheet" href="stylesheet.css">
+  <meta charset="UTF-8">
+  <title>Research – Fatema Tuz Johra Nourin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Research portfolio of Fatema Tuz Johra Nourin – publications and conference presentations.">
+
+  <!-- Same fonts as homepage -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text-main: #111111;
+      --text-muted: #555555;
+      --border: #e5e5e5;
+      --link: #0057ff;
+      --font-serif: "Playfair Display", "Times New Roman", serif;
+      --font-sans: "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --max-width: 820px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px 40px;
+    }
+
+    .content {
+      width: 100%;
+      max-width: var(--max-width);
+    }
+
+    /* Top nav */
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      font-size: 0.85rem;
+      margin-bottom: 18px;
+    }
+
+    .nav a {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+    }
+
+    .nav a:hover {
+      border-color: var(--border);
+      color: var(--text-main);
+    }
+
+    .nav a.current {
+      border-color: var(--border);
+      background: #f7f7f7;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    .name {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+    }
+
+    main {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    section {
+      margin-bottom: 26px;
+    }
+
+    h2 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin: 0 0 8px;
+      color: var(--text-muted);
+    }
+
+    h3 {
+      font-size: 0.98rem;
+      margin: 12px 0 6px;
+      color: var(--text-main);
+    }
+
+    .pub-list,
+    .talk-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .pub-list li,
+    .talk-list li {
+      margin-bottom: 10px;
+    }
+
+    .pub-title {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    footer {
+      margin-top: 24px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+  </style>
 </head>
 <body>
+  <div class="page">
+    <div class="content">
 
+      <!-- Top nav -->
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="research.html" class="current">Research</a>
+        <a href="Resources.html">Media &amp; Resources</a>
+        <a href="FatemaResume_Summer22.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
 
-<div align=center> <table width=75% cellpadding=0 cellspacing=0> <tr align=left> <td>
-        <table border="0" cellspacing="20">
-            <tr valign=top>
-                <td width="280"> <img src="website image.jpg" alt="Fatema Nourin" height='275'>
-                <td width="525">     <strong> Fatema Tuz Johra Nourin</strong> <br>
-                                        <em>Graduate Teaching Assistant</em> <br> 
-                                        Department of Community and Regional Planning<br>
-                                        Iowa State University<br>
-                                        <br>
-			
-					<em>GIS Technician</em> <br> 
-                                        Geographic Information Systems Support and Research Facility<br>
-					Iowa State University<br>
-                                        <br>
-			
-                                        Phone: 307-343-6772<br>
-                                        Email: <code>fnourin@iastate.edu</code><br>
-                                        <a href="FatemaResume_Summer22.pdf">Resume</a>
-            </tr>
+      <header>
+        <div class="name">Research</div>
+        <div class="subtitle">
+          Fatema Tuz Johra Nourin · PhD Student in Geography, The University of Alabama
+        </div>
+      </header>
 
+      <main>
+        <!-- Publications -->
+        <section id="publications">
+          <h2>Publications</h2>
 
-        </table>
-        
-        <hr>
-        
-        <p>
-            <a href="https://fnourin.github.io/">Home</a> &emsp;||&emsp;
-            <a href="research.html">Teaching and Research Experience</a> &emsp;||&emsp;
-	    <a href="Resources.html">Media Presence and Resources</a>
-        </p>
-        
-	
-    
-        <a name="Teaching"><h3>Teaching Experience</h3></a>
-			<h4>Graduate Teaching Assistant at Iowa State University, 2020-present</h4>
-				<ul>
-					<li><b>Course:</b>  CRP 251- Fundamentals of GIS
-					<li><b>Syllabus included:</b> Introduction to ArcGIS Online and applications such as- ArcGIS Insights, Story maps, Survey123, Field Maps.
-				</ul>
-			<h4>Graduate Teaching Assistant at University of Wyoming, 2017- 2019 </h4>
-				<ul>
-					<li><b>Course:</b>  GEOG 4200/5200- Introducion to GIS
-					<li><b>Syllabus included:</b> Projection and transformation, topology, georeferencing, vector and Raster analysis, multicriteria analysis.
+          <h3>Peer-Reviewed Publication</h3>
+          <ul class="pub-list">
+            <li>
+              <span class="pub-title">Encroachment of the Buriganga River in Bangladesh.</span><br>
+              Mahmood, S., <strong>Nourin, F. T. J.</strong>, Siddika, A., &amp; Khan, T. F. (2017). 
+              <em>Journal of Minerals and Materials Characterization and Engineering</em>, 5(05), 266.
+            </li>
+          </ul>
 
-					<li><b>Course:</b>  GEOG 4210/5210- Advanced GIS
-					<li><b>Syllabus included:</b> Modifiable areal unit problem, Interpolation, cost path analysis, Some GIS automation using Model Builder.
-				</ul>
+          <h3>Manuscripts in Preparation</h3>
+          <ul class="pub-list">
+            <li>
+              <span class="pub-title">How do coastal residents prepare for hurricanes in pre-hurricane season?</span><br>
+              <strong>Nourin, F. T. J.</strong>, Cass, E., &amp; Shao, W. (in preparation). University of Alabama.
+            </li>
+            <li>
+              <span class="pub-title">Shoreline change analysis of Mobile Bay, Alabama.</span><br>
+              <strong>Nourin, F. T. J.</strong>, &amp; Shao, W. (in preparation). University of Alabama.
+            </li>
+            <li>
+              <span class="pub-title">Shifts in stakeholder perception through knowledge co-production in Mobile Bay.</span><br>
+              <strong>Nourin, F. T. J.</strong>, Haque, M. M., &amp; Shao, W. (in preparation). University of Alabama.
+            </li>
+          </ul>
 
-	<a name="Job"><h3>GIS Job Experience</h3></a>
+          <p style="margin-top: 10px;">
+            For the most up-to-date list of my publications and citations, see my profiles on
+            <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> and
+            <a href="https://www.researchgate.net" target="_blank" rel="noopener">ResearchGate</a>.
+          </p>
+        </section>
 
-            		<h4>GIS Technician at Iowa State University, June 2021- present </h4>
-				<ul>
-					<li>Crop boundary delineation for the Agricultural Conservation Planning Framework (ACPF) project (Summer 2021, Summer 2022).
-					<li>Preparation of a historical topographic map service of Iowa from scanned maps and generation of the pipeline of the work that has been used in other similar projects (Fall 2021), Published in- <a href = "https://ortho.gis.iastate.edu/index.html"> here</a>.
-					<li>Georeferencing of historic DOT maps of Iowa and ceartion of a time enabled map service (Spring 2022).
-					<li>Lidar Data Classification for Clarke, Decatur and Madison Counties (Spring 2022).
-				</ul>
+        <!-- Conference Presentations -->
+        <section id="conferences">
+          <h2>Conference Presentations</h2>
 
-            		<h4>Team Leader at Play Ames: Imagine your City, the first cummunity engamement festival in Fall 2021</h4>
-				<ul>
-					<li>Led the Digital mapping of benches, Paper mapping of unsafe places, and exploring virtual reality.
-					<li> Designed the Spot-the-differences game and the Geoform using ArcGIS Survey 123. Detailes can be found <a href = "https://www.communityengagementll.net/blank-page-2">here</a>.
-					<li> Created a <a href = "https://www.communityengagementll.net/"> website </a> for the project.  
-				</ul>
+          <p>
+            Selected conference and workshop presentations will be listed here. Use the examples below
+            as a template and replace with your actual talk titles and venues.
+          </p>
 
-            		<h4>GIS Intern at unevictIA, Summer 2021</h4>
-				<ul>
-					<li>Developed first ever eviction record map of 22 most populated Iowa counties.
-					<li>Created an Interactive year-wise eviction record chart using Shiny R. (Website: https://www.unevictia.com/map-data)
-				</ul>
+          <ul class="talk-list">
+            <li>
+              <strong>[Talk title goes here]</strong><br>
+              [Your name] ([Year]). [Session or panel title, if relevant]. 
+              <em>[Conference Name]</em>, [Location].
+            </li>
+            <li>
+              <strong>[Second talk title]</strong><br>
+              [Your name] ([Year]). [Short description or co-authors]. 
+              <em>[Conference Name]</em>, [Location].
+            </li>
+          </ul>
+        </section>
+      </main>
 
-			<h4>Research Associate at Institute of Water and Flood Management, May 2016 - June 2017</h4>
-				<ul>
-					<li><b>Project:</b> REACH- Improving Water Security for the Poor, Globally Led by University of Oxford, UK.
-					<li>Primary Duties: GIS data collection and map preparation, Land Use Land Cover Change Detection of Dhaka City from 1995, 2000, and 2005 images using QGIS.
-				</ul>
+      <footer>
+        You can return to the <a href="index.html">homepage</a> or explore
+        <a href="Resources.html">media and resources</a>.
+      </footer>
 
-
-
-			<h4>Dessertation research at Graduate level</h4>
-            <table style="width: 100%">
-				<colgroup>
-					<col span="1" style="width: 100%;">
-				</colgroup>
-				<tbody>
-					<tr><i>Masters Dissertation at Iowa State University</i></tr>
-					<tr>
-						<ul>
-							<li> Urban growth sustainability estimation from Land Use Land Cover (LULC) categories: A case study of utilizing Google Earth Engine.
-						</ul>
-							   
-					</tr>
-					
-					<tr><i>Masters Dissertation at University of Wyoming</i></tr>
-					<tr>
-						<ul>
-							<li> An Exploratory Study on the Impact of Wildfire Events in Yellowstone National Park using Biased Flickr Data.
-						</ul>
-					</tr>
-				</tbody>
-			</table>
-	
-		<h4>Graduate Research Assistant at University of Wyoming</h4>
-			<ul>
-				<li> Evaluated operational performances of innovative intersections and transit priority in Redwood Road Corridor at Salt Lake City, Utah. (sponsored by Avenue Consultant)
-				<li> Implemented driver behavior model for Connected and Automated Vehicles and evaluated the operational benefits
-			</ul>
-	
-		<a href="https://scholar.google.com/citations?hl=en&user=foeNpTAAAAAJ">Google Scholar Profile</a> &emsp;||&emsp;
-		<a href = "https://www.researchgate.net/profile/Fatema-Tuz-Johra-Nourin/research"> Research Gate </a>	&emsp;||&emsp;
-		<a href="https://www.linkedin.com/in/fatema-tuz-johra-nourin-993200134/">Linkedin Profile</a> <br>
-        
-        
-        <a name="publications"><h3>Publications</h3></a>
-
-		<h4>Journal Publications</h4>
-		
-			<ol>
- 
-			    <li> Mahmood, S.<b>Nourin, F. T. J.,</b>, Siddika, A., & Khan, T. F. (2017). Encroachment of the Buriganga River in Bangladesh. <i>Journal of Minerals and Materials Characterization and Engineering</i>, 5(5), 266-273. https://doi.org/10.4236/jmmce.2017.55022 
-			</ol>
-
-            	<h4>Conference Proceedings</h4>
-			<ol>
- 
-			    <li> <b>Nourin, F. T. J.,</b>, Tobin, T., Pechman, R. J. 2021. Game-Based Community Engagement with Spot-the-Differences Game and Survey123. <i>ESRI User Conference</i>, San Diego, CA, 2022.
-			    <li> Kosacz, T., Gula, M., Poplin, A., Tobin, T., <b> Nourin, F.T.J</b>. 2021. Mapping Unsafe Places and Emotions: Study of Ames, Iowa. <i> International Symposium on Platial Information Science</i>. Hosted by ITC, University of Twente, the Netherlands. 
-			    <li> <b>Nourin, F. T. J.,</b>, Xu, C. 2019. An Exploratory Analysis of Social Media Data Usage in Yellowstone National Park. <i>National AAG</i> Washington DC, 2019.
-			    <li>Betcher, G., Poplin A., Schroeder, S.,  <b>Nourin, F. T. J.,</b>, Jacobson, N., Sairamesh, V.P. 2022. Play Ames: Imagine Your City-A City-University Partnership to Increase Engagement with Underrepresented. <i> International Town and Gown Association (ITGA)</i>. Clemson, South Carolina. 
-			    <li><b>Nourin, F. T. J.,</b>, Mahmood S., Chayon M.S.A., Siddika, A., Khan M.S.A. 2017. Assessment of Different Dimensions of Irrigation Water Security in A Coastal Polder of Bangladesh. <i> 6th International Conference on Water & Flood Management (ICWFM-2017)</i>. Dhaka, Bangladesh.
-  
-			</ol>
-
-
-		<h4>Book Chapter</h4>
-		
-			<ol>
- 
-			    <li> Poplin A., Schroeder, S.,<b>Nourin, F. T. J.,</b>. 2023. Play Ames: Imagine your City, 1st community engagement festival in Ames, Iowa. Mittal, J. LaFrombois, M.E.H. (eds). <i> Partners in Planning: University-Community Partnerships in Planning Education. Auburn University, AL, United States. </i> 
-			</ol>
-
-
-        <p><em>Last updated July 11, 2022</em></p>
-
-       
-        </div> 
-    </body>
-</html> 
+    </div>
+  </div>
+</body>
+</html>
