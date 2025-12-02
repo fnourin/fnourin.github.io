@@ -1,251 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research – Fatema Tuz Johra Nourin</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Research portfolio of Fatema Tuz Johra Nourin – publications and conference presentations.">
 
-  <!-- Same fonts as homepage -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Lato:wght@300;400;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #ffffff;
-      --text-main: #111111;
-      --text-muted: #555555;
-      --border: #e5e5e5;
-      --link: #0057ff;
-      --font-serif: "Playfair Display", "Times New Roman", serif;
-      --font-sans: "Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --max-width: 820px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background: var(--bg);
-      color: var(--text-main);
-      font-family: var(--font-sans);
-      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      background: white;
+      font-family: "Lato", sans-serif;
+      color: #333;
     }
 
-    a {
-      color: var(--link);
-      text-decoration: none;
+    /* Header banner */
+    .top-banner {
+      background: #999; /* you can change this color */
+      padding: 30px 0;
+      text-align: center;
+      color: white;
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      letter-spacing: 3px;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .page {
-      min-height: 100vh;
+    /* Horizontal navigation bar */
+    .nav-links {
       display: flex;
       justify-content: center;
-      padding: 32px 16px 40px;
+      gap: 60px;
+      font-size: 1.4rem;
+      font-family: "Playfair Display", serif;
+      padding: 20px 0;
+      color: #555;
     }
 
-    .content {
+    .nav-links a {
+      text-decoration: none;
+      color: #666;
+    }
+
+    .nav-links a:hover {
+      color: black;
+    }
+
+    /* Image tiles section */
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      padding: 40px 60px;
+      text-align: center;
+    }
+
+    .tile {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .tile img {
       width: 100%;
-      max-width: var(--max-width);
+      border-radius: 6px;
+      height: 320px;
+      object-fit: cover;
     }
 
-    /* Top nav */
-    .nav {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-      font-size: 0.85rem;
-      margin-bottom: 18px;
+    .tile-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      margin-top: 12px;
     }
 
-    .nav a {
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      color: var(--text-muted);
+    .tile-year {
+      font-size: 0.9rem;
+      color: #777;
     }
 
-    .nav a:hover {
-      border-color: var(--border);
-      color: var(--text-main);
-    }
-
-    .nav a.current {
-      border-color: var(--border);
-      background: #f7f7f7;
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    header {
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 14px;
-      margin-bottom: 18px;
-    }
-
-    .name {
-      font-family: var(--font-serif);
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-
-    .subtitle {
-      font-size: 0.96rem;
-      color: var(--text-muted);
-    }
-
-    main {
-      font-size: 0.96rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
+    /* Section styling */
     section {
-      margin-bottom: 26px;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
     }
 
     h2 {
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      margin: 0 0 8px;
-      color: var(--text-muted);
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+      scroll-margin-top: 120px;
     }
 
-    h3 {
-      font-size: 0.98rem;
-      margin: 12px 0 6px;
-      color: var(--text-main);
+    ul {
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
-    .pub-list,
-    .talk-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    li {
+      margin-bottom: 15px;
     }
 
-    .pub-list li,
-    .talk-list li {
-      margin-bottom: 10px;
-    }
-
-    .pub-title {
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    footer {
-      margin-top: 24px;
-      padding-top: 10px;
-      border-top: 1px solid var(--border);
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
   </style>
 </head>
+
 <body>
-  <div class="page">
-    <div class="content">
 
-      <!-- Top nav -->
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="research.html" class="current">Research</a>
-        <a href="Resources.html">Media &amp; Resources</a>
-        <a href="FatemaResume_Summer22.pdf" target="_blank" rel="noopener">Resume</a>
-      </nav>
+  <!-- Banner -->
+  <div class="top-banner">FN</div>
 
-      <header>
-        <div class="name">Research</div>
-        <div class="subtitle">
-          Fatema Tuz Johra Nourin · PhD Student in Geography, The University of Alabama
-        </div>
-      </header>
-
-      <main>
-        <!-- Publications -->
-        <section id="publications">
-          <h2>Publications</h2>
-
-          <h3>Peer-Reviewed Publication</h3>
-          <ul class="pub-list">
-            <li>
-              <span class="pub-title">Encroachment of the Buriganga River in Bangladesh.</span><br>
-              Mahmood, S., <strong>Nourin, F. T. J.</strong>, Siddika, A., &amp; Khan, T. F. (2017). 
-              <em>Journal of Minerals and Materials Characterization and Engineering</em>, 5(05), 266.
-            </li>
-          </ul>
-
-          <h3>Manuscripts in Preparation</h3>
-          <ul class="pub-list">
-            <li>
-              <span class="pub-title">How do coastal residents prepare for hurricanes in pre-hurricane season?</span><br>
-              <strong>Nourin, F. T. J.</strong>, Cass, E., &amp; Shao, W. (in preparation). University of Alabama.
-            </li>
-            <li>
-              <span class="pub-title">Shoreline change analysis of Mobile Bay, Alabama.</span><br>
-              <strong>Nourin, F. T. J.</strong>, &amp; Shao, W. (in preparation). University of Alabama.
-            </li>
-            <li>
-              <span class="pub-title">Shifts in stakeholder perception through knowledge co-production in Mobile Bay.</span><br>
-              <strong>Nourin, F. T. J.</strong>, Haque, M. M., &amp; Shao, W. (in preparation). University of Alabama.
-            </li>
-          </ul>
-
-          <p style="margin-top: 10px;">
-            For the most up-to-date list of my publications and citations, see my profiles on
-            <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a> and
-            <a href="https://www.researchgate.net" target="_blank" rel="noopener">ResearchGate</a>.
-          </p>
-        </section>
-
-        <!-- Conference Presentations -->
-        <section id="conferences">
-          <h2>Conference Presentations</h2>
-
-          <p>
-            Selected conference and workshop presentations will be listed here. Use the examples below
-            as a template and replace with your actual talk titles and venues.
-          </p>
-
-          <ul class="talk-list">
-            <li>
-              <strong>[Talk title goes here]</strong><br>
-              [Your name] ([Year]). [Session or panel title, if relevant]. 
-              <em>[Conference Name]</em>, [Location].
-            </li>
-            <li>
-              <strong>[Second talk title]</strong><br>
-              [Your name] ([Year]). [Short description or co-authors]. 
-              <em>[Conference Name]</em>, [Location].
-            </li>
-          </ul>
-        </section>
-      </main>
-
-      <footer>
-        You can return to the <a href="index.html">homepage</a> or explore
-        <a href="Resources.html">media and resources</a>.
-      </footer>
-
-    </div>
+  <!-- Horizontal Navigation -->
+  <div class="nav-links">
+    <a href="#publications">Publications</a>
+    <a href="#research-progress">Research in Progress</a>
+    <a href="#presentations">Conference Presentations</a>
   </div>
+
+  <!-- IMAGE TILE SECTION -->
+  <div class="tiles">
+
+    <a href="#publications" class="tile">
+      <img src="publication.jpg" alt="Publications">
+      <div class="tile-title">Publications</div>
+      <div class="tile-year">2025</div>
+    </a>
+
+    <a href="#research-progress" class="tile">
+      <img src="researchprogress.jpg" alt="Research in Progress">
+      <div class="tile-title">Research in Progress</div>
+      <div class="tile-year">2025</div>
+    </a>
+
+    <a href="#presentations" class="tile">
+      <img src="presentation.jpg" alt="Presentations">
+      <div class="tile-title">Conference Presentations</div>
+      <div class="tile-year">2024</div>
+    </a>
+
+  </div>
+
+  <!-- PUBLICATIONS SECTION -->
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <ul>
+      <li>
+        Mahmood, S., <strong>Nourin, F. T. J.</strong>, Siddika, A., &amp; Khan, T. F. (2017).  
+        <em>Encroachment of the Buriganga River in Bangladesh.</em><br>
+        Journal of Minerals and Materials Characterization and Engineering, 5(05), 266.
+      </li>
+    </ul>
+
+    <h2 style="margin-top: 40px;">Manuscripts in Preparation</h2>
+
+    <ul>
+      <li>
+        <strong>Nourin, F. T. J.</strong>, Cass, E., &amp; Shao, W. (in prep.).  
+        <em>How do coastal residents prepare for hurricanes in pre-hurricane season?</em>  
+        University of Alabama.
+      </li>
+
+      <li>
+        <strong>Nourin, F. T. J.</strong>, &amp; Shao, W. (in prep.).  
+        <em>Shoreline change analysis of Mobile Bay, Alabama.</em>  
+        University of Alabama.
+      </li>
+
+      <li>
+        <strong>Nourin, F. T. J.</strong>, Haque, M. M., &amp; Shao, W. (in prep.).  
+        <em>Shifts in stakeholder perception through knowledge co-production in Mobile Bay.</em>  
+        University of Alabama.
+      </li>
+    </ul>
+  </section>
+
+  <!-- RESEARCH IN PROGRESS SECTION -->
+  <section id="research-progress">
+    <h2>Research in Progress</h2>
+
+    <ul>
+      <li><strong>Hurricane Preparedness:</strong> Modeling perception and preparedness behaviors among coastal households.</li>
+      <li><strong>Shoreline Change Analysis:</strong> Quantifying 25 years of coastal dynamics in Mobile Bay using Google Earth Engine.</li>
+      <li><strong>Stakeholder Knowledge Co-Production:</strong> Mapping resilience strategies and communication patterns.</li>
+    </ul>
+  </section>
+
+  <!-- PRESENTATIONS SECTION -->
+  <section id="presentations">
+    <h2>Conference Presentations</h2>
+
+    <ul>
+      <li>
+        <strong>[Your Conference Presentation Title Here]</strong><br>
+        Nourin, F. T. J. (Year). Conference Name, Location.
+      </li>
+
+      <li>
+        <strong>[Second Presentation Title Here]</strong><br>
+        Nourin, F. T. J. (Year). Conference Name, Location.
+      </li>
+    </ul>
+  </section>
+
 </body>
 </html>
