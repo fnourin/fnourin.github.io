@@ -11,9 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -22,15 +20,29 @@
       color: #333;
     }
 
-    /* Header banner */
-    .top-banner {
-      background: #999; /* you can change this color */
-      padding: 30px 0;
+    /* Home button at top */
+    .home-bar {
+      padding: 20px 0 6px;
       text-align: center;
+    }
+
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: #111;
       color: white;
-      font-family: "Playfair Display", serif;
-      font-size: 2rem;
-      letter-spacing: 3px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: 0.2s ease-in-out;
+    }
+
+    .home-btn:hover {
+      opacity: 0.85;
+      text-decoration: none;
     }
 
     /* Horizontal navigation bar */
@@ -38,10 +50,9 @@
       display: flex;
       justify-content: center;
       gap: 60px;
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-family: "Playfair Display", serif;
-      padding: 20px 0;
-      color: #555;
+      padding: 14px 0 18px;
     }
 
     .nav-links a {
@@ -53,12 +64,12 @@
       color: black;
     }
 
-    /* Image tiles section */
+    /* Image tile grid */
     .tiles {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 40px;
-      padding: 40px 60px;
+      padding: 34px 60px 22px;
       text-align: center;
     }
 
@@ -69,14 +80,15 @@
 
     .tile img {
       width: 100%;
-      border-radius: 6px;
       height: 320px;
       object-fit: cover;
+      border-radius: 6px;
+      display: block;
     }
 
     .tile-title {
       font-family: "Playfair Display", serif;
-      font-size: 1.3rem;
+      font-size: 1.28rem;
       margin-top: 12px;
     }
 
@@ -85,10 +97,10 @@
       color: #777;
     }
 
-    /* Section styling */
+    /* Sections */
     section {
       max-width: 900px;
-      margin: 50px auto;
+      margin: 46px auto;
       padding: 0 20px;
     }
 
@@ -96,37 +108,96 @@
       font-family: "Playfair Display", serif;
       font-size: 1.8rem;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       scroll-margin-top: 120px;
     }
 
     ul {
-      font-size: 1rem;
       line-height: 1.7;
+      font-size: 1rem;
+      margin: 0;
+      padding-left: 22px;
     }
 
     li {
       margin-bottom: 15px;
     }
 
+    /* Presentation "cards" */
+    .talk-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+
+    .talk {
+      margin-bottom: 32px;
+    }
+
+    .talk-title {
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .talk-meta {
+      margin-bottom: 10px;
+    }
+
+    .talk img {
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .tiles {
+        grid-template-columns: 1fr;
+        padding: 18px 20px 6px;
+        gap: 26px;
+      }
+
+      .tile img {
+        height: 260px;
+      }
+
+      .nav-links {
+        gap: 22px;
+        padding: 10px 12px 12px;
+        font-size: 1.15rem;
+        flex-wrap: wrap;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- Banner -->
-  <div class="top-banner">FN</div>
+  <!-- Home button (replaces initials/banner) -->
+  <div class="home-bar">
+    <a href="index.html" class="home-btn" aria-label="Go to homepage">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9.5l9-7 9 7"></path>
+        <path d="M9 22V12h6v10"></path>
+      </svg>
+      Home
+    </a>
+  </div>
 
-  <!-- Horizontal Navigation -->
+  <!-- Horizontal section navigation -->
   <div class="nav-links">
     <a href="#publications">Publications</a>
     <a href="#research-progress">Research in Progress</a>
     <a href="#presentations">Conference Presentations</a>
   </div>
 
-  <!-- IMAGE TILE SECTION -->
+  <!-- Clickable image tiles -->
   <div class="tiles">
-
     <a href="#publications" class="tile">
       <img src="publication.jpg" alt="Publications">
       <div class="tile-title">Publications</div>
@@ -140,96 +211,94 @@
     </a>
 
     <a href="#presentations" class="tile">
-      <img src="presentation.jpg" alt="Presentations">
+      <img src="presentation.jpg" alt="Conference Presentations">
       <div class="tile-title">Conference Presentations</div>
       <div class="tile-year">2024</div>
     </a>
-
   </div>
 
-  <!-- PUBLICATIONS SECTION -->
+  <!-- Publications -->
   <section id="publications">
-  <h2>Publications</h2>
+    <h2>Publications</h2>
 
-  <ul>
-    <li>
-      Poplin, A., Schroeder, S., Betcher, G., Sairamesh, V. P., <strong>Nourin, F.</strong>, &amp; Jacobson, N. (2023).
-      <em>Play Ames: Imagine Your City. A City-University Partnership in Engaging Underrepresented Residents with Playful Learning Activities.</em>
-      In <em>Routledge Handbook of University-Community Partnerships in Planning Education</em> (pp. 443–461). Routledge.
-    </li>
+    <ul>
+      <li>
+        Poplin, A., Schroeder, S., Betcher, G., Sairamesh, V. P., <strong>Nourin, F.</strong>, &amp; Jacobson, N. (2023).
+        <em>Play Ames: Imagine Your City. A City-University Partnership in Engaging Underrepresented Residents with Playful Learning Activities.</em>
+        In <em>Routledge Handbook of University-Community Partnerships in Planning Education</em> (pp. 443–461). Routledge.
+      </li>
 
-    <li>
-      Kosacz, T., Gula, M., Poplin, A., Tobin, T., &amp; <strong>Nourin, F.</strong> (2022).
-      <em>Mapping unsafe places and emotions: study of Ames, Iowa.</em>
-      In <em>Proceedings of the Third International Symposium on Platial Information Science (PLATIAL’21)</em> (pp. 5–10).
-    </li>
+      <li>
+        Kosacz, T., Gula, M., Poplin, A., Tobin, T., &amp; <strong>Nourin, F.</strong> (2022).
+        <em>Mapping unsafe places and emotions: study of Ames, Iowa.</em>
+        In <em>Proceedings of the Third International Symposium on Platial Information Science (PLATIAL’21)</em> (pp. 5–10).
+      </li>
 
-    <li>
-      Mahmood, S., <strong>Nourin, F. T. J.</strong>, Siddika, A., &amp; Khan, T. F. (2017).
-      <em>Encroachment of the Buriganga River in Bangladesh.</em><br>
-      Journal of Minerals and Materials Characterization and Engineering, 5(05), 266.
-    </li>
-  </ul>
+      <li>
+        Mahmood, S., <strong>Nourin, F. T. J.</strong>, Siddika, A., &amp; Khan, T. F. (2017).
+        <em>Encroachment of the Buriganga River in Bangladesh.</em><br>
+        Journal of Minerals and Materials Characterization and Engineering, 5(05), 266.
+      </li>
+    </ul>
 
-  <h2 style="margin-top: 40px;">Manuscripts in Preparation</h2>
+    <h2 style="margin-top: 40px;">Manuscripts in Preparation</h2>
 
-  <ul>
-    <li>
-      <strong>Nourin, F. T. J.</strong>, Cass, E., &amp; Shao, W. (in prep.).
-      <em>How do coastal residents prepare for hurricanes in pre-hurricane season?</em>
-      University of Alabama.
-    </li>
+    <ul>
+      <li>
+        <strong>Nourin, F. T. J.</strong>, Cass, E., &amp; Shao, W. (in prep.).
+        <em>How do coastal residents prepare for hurricanes in pre-hurricane season?</em>
+        University of Alabama.
+      </li>
 
-    <li>
-      <strong>Nourin, F. T. J.</strong>, &amp; Shao, W. (in prep.).
-      <em>Shoreline change analysis of Mobile Bay, Alabama.</em>
-      University of Alabama.
-    </li>
+      <li>
+        <strong>Nourin, F. T. J.</strong>, &amp; Shao, W. (in prep.).
+        <em>Shoreline change analysis of Mobile Bay, Alabama.</em>
+        University of Alabama.
+      </li>
 
-    <li>
-      <strong>Nourin, F. T. J.</strong>, Haque, M. M., &amp; Shao, W. (in prep.).
-      <em>Shifts in stakeholder perception through knowledge co-production in Mobile Bay.</em>
-      University of Alabama.
-    </li>
-  </ul>
-</section>
+      <li>
+        <strong>Nourin, F. T. J.</strong>, Haque, M. M., &amp; Shao, W. (in prep.).
+        <em>Shifts in stakeholder perception through knowledge co-production in Mobile Bay.</em>
+        University of Alabama.
+      </li>
+    </ul>
+  </section>
 
+  <!-- Research in Progress -->
+  <section id="research-progress">
+    <h2>Research in Progress</h2>
 
-  <!-- PRESENTATIONS SECTION -->
- <section id="presentations">
-  <h2>Conference Presentations</h2>
+    <ul>
+      <li><strong>Hurricane Preparedness:</strong> Modeling perception and preparedness behaviors among coastal households.</li>
+      <li><strong>Shoreline Change Analysis:</strong> Quantifying 25 years of coastal dynamics in Mobile Bay using Google Earth Engine.</li>
+      <li><strong>Stakeholder Knowledge Co-Production:</strong> Understanding shifts in perception through co-produced knowledge and participatory engagement.</li>
+    </ul>
+  </section>
 
-  <ul style="list-style: none; padding-left: 0; max-width: 900px; margin: 0 auto;">
-    <li style="margin-bottom: 32px;">
-      <div style="font-weight: 700; margin-bottom: 6px;">
-        AAG (Detroit, Michigan)
-      </div>
-      <div style="margin-bottom: 10px;">
-        <strong>Presentation:</strong> <em>Shift of stakeholder perception through knowledge co-production.</em>
-      </div>
+  <!-- Conference Presentations -->
+  <section id="presentations">
+    <h2>Conference Presentations</h2>
 
-      <!-- Image placeholder (replace file name with your actual image) -->
-      <img src="aag-detroit.jpg"
-           alt="AAG Detroit presentation image"
-           style="width: 100%; max-width: 720px; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
-    </li>
+    <ul class="talk-list">
+      <li class="talk">
+        <div class="talk-title">AAG, Detroit, Michigan</div>
+        <div class="talk-meta">
+          <strong>Presentation:</strong> <em>Shift of stakeholder perception through knowledge co-production.</em>
+        </div>
+        <!-- Image placeholder -->
+        <img src="aag-detroit.jpg" alt="AAG Detroit presentation image">
+      </li>
 
-    <li style="margin-bottom: 10px;">
-      <div style="font-weight: 700; margin-bottom: 6px;">
-        Alabama Water Resource Conference (Orange Beach, AL)
-      </div>
-      <div style="margin-bottom: 10px;">
-        <strong>Poster:</strong> <em>Shoreline Change Analysis of Mobile Bay.</em>
-      </div>
-
-      <!-- Image placeholder (replace file name with your actual image) -->
-      <img src="al-water-orangebeach.jpg"
-           alt="Alabama Water Resource Conference poster image"
-           style="width: 100%; max-width: 720px; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
-    </li>
-  </ul>
-</section>
-
+      <li class="talk">
+        <div class="talk-title">Alabama Water Resource Conference, Orange Beach, AL</div>
+        <div class="talk-meta">
+          <strong>Poster:</strong> <em>Shoreline Change Analysis of Mobile Bay.</em>
+        </div>
+        <!-- Image placeholder -->
+        <img src="al-water-orangebeach.jpg" alt="Alabama Water Resource Conference poster image">
+      </li>
+    </ul>
+  </section>
 
 </body>
 </html>
