@@ -1,65 +1,297 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Home</title>
-  
-    <meta name="author" content="Fatema Tuz Johra Nourin">
-	
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Fatema,Nourin, Nourin Fatema, Fatema Nourin, GIS, research, Remote sensing, python, API">
-    <link rel="stylesheet" href="stylesheet.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Media Presence & Resources – Fatema Tuz Johra Nourin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: white;
+      font-family: "Lato", sans-serif;
+      color: #333;
+    }
+
+    /* Home button */
+    .home-bar {
+      padding: 20px 0 6px;
+      text-align: center;
+    }
+
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: #111;
+      color: white;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: 0.2s ease-in-out;
+    }
+
+    .home-btn:hover {
+      opacity: 0.85;
+      text-decoration: none;
+    }
+
+    /* Horizontal nav */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      font-size: 1.35rem;
+      font-family: "Playfair Display", serif;
+      padding: 14px 0 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #666;
+    }
+
+    .nav-links a:hover {
+      color: black;
+    }
+
+    /* Image tiles */
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      padding: 34px 60px 22px;
+      text-align: center;
+    }
+
+    .tile {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .tile img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .tile-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.28rem;
+      margin-top: 12px;
+    }
+
+    .tile-year {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    /* Sections */
+    section {
+      max-width: 900px;
+      margin: 46px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 18px;
+      scroll-margin-top: 120px;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #444;
+      margin: 0 auto 14px;
+      max-width: 860px;
+    }
+
+    /* Link cards */
+    .link-card {
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 12px auto;
+      max-width: 860px;
+    }
+
+    .link-card a {
+      font-weight: 700;
+      color: #111;
+      text-decoration: none;
+    }
+
+    .link-card a:hover {
+      text-decoration: underline;
+    }
+
+    .link-card .meta {
+      color: #666;
+      margin-top: 6px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .tiles {
+        grid-template-columns: 1fr;
+        padding: 18px 20px 6px;
+        gap: 26px;
+      }
+
+      .tile img { height: 260px; }
+
+      .nav-links {
+        gap: 22px;
+        padding: 10px 12px 12px;
+        font-size: 1.15rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
+  <!-- Home button -->
+  <div class="home-bar">
+    <a href="index.html" class="home-btn" aria-label="Go to homepage">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9.5l9-7 9 7"></path>
+        <path d="M9 22V12h6v10"></path>
+      </svg>
+      Home
+    </a>
+  </div>
 
-<div align=center> <table width=75% cellpadding=0 cellspacing=0> <tr align=left> <td>
-        <table border="0" cellspacing="20">
-            <tr valign=top>
-                <td width="280"> <img src="website image.jpg" alt="Fatema Nourin" height='275'>
-                <td width="525">     <strong> Fatema Tuz Johra Nourin</strong> <br>
-                                        <em>Graduate Teaching Assistant</em> <br> 
-                                        Department of Community and Regional Planning<br>
-                                        Iowa State University<br>
-                                        <br>
-			
-					<em>GIS Technician</em> <br> 
-                                        Geographic Information Systems Support and Research Facility<br>
-					Iowa State University<br>
-                                        <br>
-			
-                                        Phone: 307-343-6772<br>
-                                        Email: <code>fnourin@iastate.edu</code><br>
-                                        <a href="FatemaResume_Summer22.pdf">Resume</a>
-            </tr>
+  <!-- Horizontal nav -->
+  <div class="nav-links">
+    <a href="#media">Media Presence</a>
+    <a href="#tutorial">Short ArcGIS Online Tutorial</a>
+    <a href="#news">News Coverage</a>
+    <a href="#codes">Research Codes</a>
+  </div>
 
+  <!-- Clickable image tiles (3 tiles as requested) -->
+  <div class="tiles">
+    <a href="#media" class="tile">
+      <img src="media.jpg" alt="Media Presence">
+      <div class="tile-title">Media Presence</div>
+      <div class="tile-year">2025</div>
+    </a>
 
-        </table>
-        
-        <hr>
-        
-        <p>
-            <a href="https://fnourin.github.io/">Home</a> &emsp;||&emsp;
-            <a href="research.html">Teaching and Research Experience</a> &emsp;||&emsp;
-	    <a href="Resources.html">Media Presence and Resources</a>
-        </p>
+    <a href="#tutorial" class="tile">
+      <img src="tutorial.jpg" alt="Short ArcGIS Online Tutorial">
+      <div class="tile-title">Short ArcGIS Online Tutorial</div>
+      <div class="tile-year">2025</div>
+    </a>
 
-    <h3>Research Codes</h3>
-        <ul>
-            <li><a href = "https://github.com/fnourin/Interactive-Charts">Interactive Chart and data </a> </li>
-            <li><a href = "https://github.com/fnourin/Python-Programming-and-GIS-Automation">Python Programming and GIS Automation</a></li>
-      
-        </ul>
+    <a href="#news" class="tile">
+      <img src="news.jpg" alt="News Coverage">
+      <div class="tile-title">News Coverage</div>
+      <div class="tile-year">2025</div>
+    </a>
+  </div>
 
-    <h3>Media Presence</h3>
-        <ul>
-            <li><a href = "https://www.youtube.com/watch?v=36ETnB2aDK4&t=24s">Short ArcGIS Online Tutorial</a> </li>
-            <li><a href = "https://www.iowastatedaily.com/news/iowa-state-university-city-of-ames-play-enagement-outreach/article_eb3598c2-1efe-11ec-94a7-33d176a5db8c.html">News coverage</a></li>
-      
-        </ul>
+  <!-- Media Presence -->
+  <section id="media">
+    <h2>Media Presence</h2>
+    <p>
+      Media appearances, public scholarship, and outreach.
+    </p>
 
-
-      
+    <div class="link-card">
+      <a href="#" target="_blank" rel="noopener">[Add media item title]</a>
+      <div class="meta">Outlet · Date · Short description.</div>
     </div>
+  </section>
+
+  <!-- Short ArcGIS Online Tutorial (embedded) -->
+  <section id="tutorial">
+    <h2>Short ArcGIS Online Tutorial</h2>
+    <p>
+      A short walkthrough tutorial demonstrating an ArcGIS Online workflow.
+    </p>
+
+    <div style="max-width: 860px; margin: 0 auto;">
+      <div style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 12px; overflow: hidden; border: 1px solid #e8e8e8;">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/36ETnB2aDK4"
+          title="ArcGIS Online Tutorial"
+          style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="link-card" style="margin-top: 14px;">
+        <a href="https://youtu.be/36ETnB2aDK4?si=-SksX_iTri5CDtOj" target="_blank" rel="noopener">
+          Open on YouTube
+        </a>
+        <div class="meta">If the embed doesn’t load, you can watch directly on YouTube.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Coverage -->
+  <section id="news">
+    <h2>News Coverage</h2>
+    <p>
+      News articles featuring my work and related projects.
+    </p>
+
+    <div class="link-card">
+      <a href="https://iowastatedaily.com/247109/news/play-ames-festival-attracts-ames-residents-and-students/"
+         target="_blank" rel="noopener">
+        Play Ames festival attracts Ames residents and students
+      </a>
+      <div class="meta">
+        Iowa State Daily · News coverage of the Play Ames festival.
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Codes -->
+  <section id="codes">
+    <h2>Research Codes</h2>
+    <p>
+      Selected repositories and code resources related to my research and teaching.
+    </p>
+
+    <div class="link-card">
+      <a href="https://github.com/fnourin/Interactive-Charts" target="_blank" rel="noopener">
+        Interactive Chart and Data
+      </a>
+      <div class="meta">
+        GitHub repository: Interactive charts and supporting datasets.
+      </div>
+    </div>
+
+    <div class="link-card">
+      <a href="https://github.com/fnourin/Python-Programming-and-GIS-Automation" target="_blank" rel="noopener">
+        Python Programming and GIS Automation
+      </a>
+      <div class="meta">
+        GitHub repository: Python programming workflows for GIS automation.
+      </div>
+    </div>
+  </section>
+
 </body>
+</html>
