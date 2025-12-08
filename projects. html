@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects – Fatema Tuz Johra Nourin</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: white;
+      font-family: "Lato", sans-serif;
+      color: #333;
+    }
+
+    /* Home button */
+    .home-bar {
+      padding: 20px 0 6px;
+      text-align: center;
+    }
+
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: #111;
+      color: white;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: 0.2s ease-in-out;
+    }
+
+    .home-btn:hover { opacity: 0.85; text-decoration: none; }
+
+    /* Horizontal navigation */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      font-size: 1.35rem;
+      font-family: "Playfair Display", serif;
+      padding: 14px 0 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #666;
+    }
+    .nav-links a:hover { color: black; }
+
+    /* 2 image tiles */
+    .tiles-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      padding: 34px 60px 22px;
+      text-align: center;
+    }
+
+    .tile {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .tile img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .tile-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.28rem;
+      margin-top: 12px;
+    }
+
+    .tile-year {
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 46px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 18px;
+      scroll-margin-top: 120px;
+    }
+
+    /* Project cards */
+    .project {
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 18px 18px;
+      margin: 18px auto;
+      max-width: 900px;
+      background: #fff;
+    }
+
+    .project-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      margin: 0 0 6px;
+      color: #111;
+    }
+
+    .project-subtitle {
+      color: #666;
+      font-size: 0.98rem;
+      margin: 0 0 12px;
+    }
+
+    .project p {
+      line-height: 1.7;
+      font-size: 1rem;
+      color: #444;
+      margin: 0 0 12px;
+    }
+
+    .bullets {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.7;
+      color: #444;
+      font-size: 1rem;
+    }
+
+    .bullets li { margin-bottom: 8px; }
+
+    /* Responsive embedded iframe container */
+    .embed {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .embed-frame {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e8e8e8;
+      background: #fafafa;
+    }
+
+    .embed-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Images inside projects */
+    .project-img {
+      width: 100%;
+      max-width: 860px;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #e8e8e8;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .hint {
+      text-align: center;
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .tiles-2 {
+        grid-template-columns: 1fr;
+        padding: 18px 20px 6px;
+        gap: 26px;
+      }
+
+      .tile img { height: 260px; }
+
+      .nav-links {
+        gap: 22px;
+        padding: 10px 12px 12px;
+        font-size: 1.15rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Home button -->
+  <div class="home-bar">
+    <a href="index.html" class="home-btn" aria-label="Go to homepage">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9.5l9-7 9 7"></path>
+        <path d="M9 22V12h6v10"></path>
+      </svg>
+      Home
+    </a>
+  </div>
+
+  <!-- Horizontal nav -->
+  <div class="nav-links">
+    <a href="#current">Current Projects</a>
+    <a href="#past">Past Projects</a>
+  </div>
+
+  <!-- Two clickable image tiles -->
+  <div class="tiles-2">
+    <a href="#current" class="tile">
+      <img src="current-projects.jpg" alt="Current Projects">
+      <div class="tile-title">Current Projects</div>
+      <div class="tile-year">2024–Present</div>
+    </a>
+
+    <a href="#past" class="tile">
+      <img src="past-projects.jpg" alt="Past Projects">
+      <div class="tile-title">Past Projects</div>
+      <div class="tile-year">Selected Work</div>
+    </a>
+  </div>
+
+  <!-- Current Projects -->
+  <section id="current">
+    <h2>Current Projects</h2>
+
+    <!-- Project 1 -->
+    <div class="project">
+      <h3 class="project-title">Spatiotemporal analysis of shoreline positions</h3>
+      <p>StoryMap overview of shoreline position analysis and results.</p>
+
+      <div class="embed">
+        <div class="embed-frame">
+          <iframe
+            src="https://storymaps.arcgis.com/stories/a93be8bbb0e64037a5ffa36cbabfe0ff"
+            title="Spatiotemporal analysis of shoreline positions (StoryMap)"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="hint">If the embed doesn’t load, open it directly from the StoryMap URL.</div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <h3 class="project-title">Hurricane Preparedness</h3>
+      <p>
+        Research on hurricane preparedness, risk perception, and behavior.
+        Model output visualization is included below.
+      </p>
+
+      <img class="project-img" src="hurricane-model-output.jpg" alt="Hurricane preparedness model output">
+      <div class="hint">Upload your model output image as <strong>hurricane-model-output.jpg</strong> (or rename in the HTML).</div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <h3 class="project-title">Shift of stakeholder perception through knowledge co-production</h3>
+      <p>Interactive web mapping application exploring stakeholder perception and knowledge co-production.</p>
+
+      <div class="embed">
+        <div class="embed-frame">
+          <iframe
+            src="https://ualabama.maps.arcgis.com/apps/webappviewer/index.html?id=6fd92979b8394f7189844da4b98d5ffc"
+            title="Stakeholder perception web app"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="hint">If the web app blocks embedding, it will still open perfectly in a new tab.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Projects -->
+  <section id="past">
+    <h2>Past Projects</h2>
+
+    <div class="project">
+      <h3 class="project-title">Iowa Historical Topographic Map Service</h3>
+      <div class="project-subtitle">GIS Technician · Iowa State University GIS Facility</div>
+      <ul class="bullets">
+        <li>Created a reusable ArcGIS workflow to process and publish time-enabled web layers spanning 1920–2021.</li>
+        <li>Processed LiDAR data and georeferenced historic DOT maps into interactive web services.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3 class="project-title">Eviction Mapping &amp; Housing Justice (unevictIA)</h3>
+      <div class="project-subtitle">GIS Intern · unevictIA</div>
+      <ul class="bullets">
+        <li>Produced the first eviction record maps for 22 Iowa counties.</li>
+        <li>Developed an interactive R Shiny dashboard to visualize housing trends and support housing justice initiatives.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <h3 class="project-title">Urban Growth &amp; Water Security – REACH, Dhaka</h3>
+      <div class="project-subtitle">Research Associate · Institute of Water and Flood Management (IWFM), BUET</div>
+      <ul class="bullets">
+        <li>Used multi-temporal satellite imagery (1995–2005) to quantify land-use change and urban expansion in Dhaka.</li>
+        <li>Contributed to analysis on how urban change affects water access for vulnerable communities.</li>
+      </ul>
+    </div>
+  </section>
+
+</body>
+</html>
